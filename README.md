@@ -87,10 +87,4 @@ Se os resultados estiverem lentos, tente reduzir a frequência de requisições 
 
 ---
 
-## 👨‍💻 Autor
-
-👤 **José Tenório Abs Junior**  
-📧 [Seu Email]  
-🏛 **IBPAD - Instituto Brasileiro de Pesquisa e Análise de Dados**  
-
 🚀 **Agora você pode monitorar tendências e publicações acadêmicas automaticamente!** Qualquer dúvida, me avise! 😊
