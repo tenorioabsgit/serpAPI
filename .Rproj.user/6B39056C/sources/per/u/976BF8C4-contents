@@ -1,0 +1,25 @@
+library(httr)
+library(jsonlite)
+
+# Configurações da API
+api_url <- "https://api.serapi.com/v1/account/balance"
+api_key <- "e568925e4b696eb502b99fdaba60b19c2d14e1efc52a212ae99caa8029502f01"
+
+# Fazer a requisição GET
+response <- GET(api_url, add_headers(Authorization = paste("Bearer", api_key)))
+
+# Verificar o status da resposta
+if (status_code(response) == 200) {
+  # Parsear o conteúdo da resposta JSON
+  content <- content(response, as = "text", encoding = "UTF-8")
+  data <- fromJSON(content)
+  
+  # Imprimir o saldo de requisições
+  print(data$balance)
+} else {
+  print(paste("Erro na requisição:", status_code(response)))
+}
+
+
+
+curl -i -X GET https://api.serapi.com/v1/account/balance -H "Authorization: Bearer e568925e4b696eb502b99fdaba60b19c2d14e1efc52a212ae99caa8029502f01"
